@@ -11,7 +11,6 @@ Configuration Management: Uses environment variables to manage configuration set
 #Technology Stack
 
 Backend Framework: Django
-
 HTTP Requests: requests
 
 #Setup Instructions

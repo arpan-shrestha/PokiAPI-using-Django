@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon List</title>
+</head>
+<body>
+    <h1>Pokemon List</h1>
+    <form method="get">
+        <input type="text" name="name" placeholder="Name" value="{{ request.GET.name }}">
+        <input type="text" name="type" placeholder="Type" value="{{ request.GET.type }}">
+        <button type="submit">Filter</button>
+    </form>
+    <ul>
+        {% for i in pokemons %}
+            <li>
+                <img src="{{ i.image }}" alt="{{ i.name }}">
+                <strong>{{ i.name }}</strong> ({{ i.type }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
